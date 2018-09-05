@@ -159,7 +159,9 @@ const List = props => (
       type={Text.List.types.bulleted}
       style={{ color: core.colors.gray03 }}
     >
-      {props.points.map((point, i) => <Text.List.Item>{point}</Text.List.Item>)}
+      {props.points.map((point, i) => (
+        <Text.List.Item>{point}</Text.List.Item>
+      ))}
     </Text.List>
   </div>
 )
@@ -307,17 +309,7 @@ export default _ => (
         />
 
         <Section
-          title=""
-          WE
-          HAVE
-          A
-          CULTURE
-          OF
-          CONTINUOUS
-          LEARNING
-          AND
-          GIVING
-          BACK
+          title="WE HAVE A CULTURE OF CONTINUOUS LEARNING AND GIVING BACK"
           do={[
             'We use our product.',
             'We hold regular retrospective meetings.',
