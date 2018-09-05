@@ -179,6 +179,20 @@ const Main = props => (
   </main>
 )
 
+const Caveat = props => (
+  <div className="caveat">
+    {props.children}
+    <style jsx>{`
+      .caveat {
+        margin: 0 auto;
+        padding: ${core.layout.spacingXXLarge} ${core.layout.spacingLarge};
+        max-width: 500px;
+        font-weight: ${core.type.fontWeightBold};
+      }
+    `}</style>
+  </div>
+)
+
 export default _ => (
   <div>
     <GlobalStyles />
@@ -339,6 +353,13 @@ export default _ => (
           ]}
           avoid={['We do not permit passive-aggressive behavior. ']}
         />
+
+        <Caveat>
+          We recognize that software development is a rapidly evolving
+          profession, and we accept that our practices and requirements must
+          evolve as well. These are our current practices, but we update them as
+          we learn better ways to deliver customer value.
+        </Caveat>
       </Theme>
     </Main>
   </div>
